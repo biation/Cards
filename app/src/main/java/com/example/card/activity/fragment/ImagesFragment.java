@@ -22,7 +22,7 @@ public class ImagesFragment extends BaseFragment<FragmentImagesBinding> {
     ImageAdapter adapter;
     PixaBayViewModel viewModel;
     private Handler handler;
-
+    
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -42,6 +42,9 @@ public class ImagesFragment extends BaseFragment<FragmentImagesBinding> {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (handler != null){
+                    handler= null;
+                }
 
             }
 
